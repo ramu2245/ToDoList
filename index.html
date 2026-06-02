@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Styled Todo App</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="app-container">
+    <h2>✨My Todo List</h2>
+
+    <!-- FORM -->
+    <form id="todo-form">
+      <input type="text" id="todo-input" placeholder="Enter your task..." />
+      <button type="submit" data-tooltip="Add Task">Add Task</button>
+    </form>
+
+    <hr>
+
+    <!-- LIST -->
+    <div id="todo-list"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
