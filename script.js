@@ -59,7 +59,7 @@ function renderTodos() {
 
     actionBtn.setAttribute(
       "data-tooltip",
-      todo.completed ? "Click to mark Pending" : "Click to mark Completed"
+      todo.completed ? "mark as Pending" : "mark as Completed"
     );
 
     actionBtn.addEventListener("click", () => {
