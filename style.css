@@ -15,7 +15,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  background: linear-gradient(135deg, black, #04b9f0,black);
+  background: linear-gradient(135deg, black, #04b9f0, black);
 }
 
 /* CONTAINER */
@@ -80,7 +80,7 @@ button:hover {
 
 /* TODO ITEM */
 .todo-item {
-  background: linear-gradient(33deg,black, rgb(27, 99, 154) ,  rgb(27, 99, 154) ,black);
+  background: linear-gradient(33deg, black, rgb(27, 99, 154), rgb(27, 99, 154), black);
   padding: 18px;
   border-radius: 12px;
 
@@ -92,20 +92,21 @@ button:hover {
 }
 
 .todo-item:hover {
-  background:linear-gradient(66deg, rgb(0, 145, 255), rgb(0, 145, 255),black, rgb(0, 145, 255), rgb(0, 145, 255));
+  background: linear-gradient(66deg, rgb(0, 145, 255), rgb(0, 145, 255), black, rgb(0, 145, 255));
 }
 
-/* TEXT FIX */
+/* TEXT */
 .todo-item span {
   flex: 1;
   word-wrap: break-word;
   word-break: break-word;
+  color: white;
 }
 
 /* COMPLETED */
 .completed {
   text-decoration: line-through;
-  color: white;
+  color: #e5e5e5;
 }
 
 /* BUTTON GROUP */
@@ -114,14 +115,24 @@ button:hover {
   gap: 10px;
 }
 
-/* ACTION BUTTON */
+/* ACTION BUTTON BASE */
 .action-btn {
-  background: #4f46e5;
   position: relative;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
 }
 
-.action-btn:hover {
-  background: grey;
+/* COMPLETED → GREEN */
+.completed-status {
+  background: #22c55e;
+}
+
+/* PENDING → ORANGE */
+.pending-status {
+  background: #f59e0b;
 }
 
 /* TOOLTIP ONLY FOR ACTION BUTTON */
@@ -146,7 +157,7 @@ button:hover {
   opacity: 1;
 }
 
-/* DELETE BUTTON (NO TOOLTIP) */
+/* DELETE BUTTON */
 .delete-btn {
   background: #ef4444;
 }

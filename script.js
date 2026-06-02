@@ -45,9 +45,16 @@ function renderTodos() {
       span.classList.add("completed");
     }
 
-    // ACTION BUTTON (WITH TOOLTIP)
+    // ACTION BUTTON
     const actionBtn = document.createElement("button");
     actionBtn.className = "action-btn";
+
+    if (todo.completed) {
+      actionBtn.classList.add("completed-status");
+    } else {
+      actionBtn.classList.add("pending-status");
+    }
+
     actionBtn.textContent = todo.completed ? "Completed" : "Pending";
 
     actionBtn.setAttribute(
@@ -61,7 +68,7 @@ function renderTodos() {
       renderTodos();
     });
 
-    // DELETE BUTTON (NO TOOLTIP)
+    // DELETE BUTTON
     const delBtn = document.createElement("button");
     delBtn.textContent = "Delete";
     delBtn.className = "delete-btn";
